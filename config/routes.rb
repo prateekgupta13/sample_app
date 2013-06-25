@@ -1,4 +1,15 @@
 SampleApp::Application.routes.draw do
+  
+  get "users/new"
+
+  match '/',        to: 'static#home'
+  match '/help',    to: 'static#help'
+  match '/about',   to: 'static#about'
+  match '/contact', to: 'static#contact'
+  match '/home', to: 'static#home'
+  match '/signup', to: 'users#new'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +59,7 @@ SampleApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'static#home'
 
   # See how all your routes lay out with "rake routes"
 

@@ -3,7 +3,7 @@
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
-#  email      :string(255)
+#  email      :string(255)																						
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -49,9 +49,9 @@ describe User do
                        addresses.each do|invalid_address|
                      	@user.email=invalid_address
                      	@user.should_not be_valid
-        end
-    end
-end
+        	end
+    	end
+	end
 
 	describe "when email format is valid" do
 		it "should be valid" do

@@ -7,7 +7,7 @@ describe 'Authentication' do
 		it{should have_selector('h1',text:'Sign In' )}
 		it{should have_title(full_title('Sign In'))}
 		describe 'with invalid information' do
-			before{click_button "Sign In"}
+			before{click_button 'Sign In'}
 				it{should have_selector('h1',text:'Sign In' )}
 				it{should have_selector('div.alert.alert-error', text:'Invalid')}
 

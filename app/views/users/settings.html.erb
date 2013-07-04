@@ -1,6 +1,6 @@
 <%provide(:title, 'Settings')%>
 <h1>settings page</h1>
-<%=form_for current_user, :method=>:put do |f|%>
+<%=form_for current_user, method: :put do |f|%>
 <%=f.label :name%>
 <%=f.text_field :name%>
 <%=f.submit "Update"%>
